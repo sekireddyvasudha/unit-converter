@@ -8,7 +8,7 @@ A modern, responsive web app to convert between units of:
 - Temperature
 - Time
 
-🌓 Supports dark mode, offline usage (PWA), voice input, CSV export, and leaderboard tracking.
+🌓 Supports dark mode, offline usage (PWA), CSV export.
 
 ---
 
