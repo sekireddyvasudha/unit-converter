@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+.app {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+body.dark .app {
+  background: #1f1f1f;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.unit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.unit-row select {
+  flex: 1;
+}
+
+.result {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007acc;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+body.dark .result {
+  color: #4fc3f7;
+}
+
+#history {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+#history li {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark #history li {
+  border-color: #444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

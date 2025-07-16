@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All-in-One Unit Converter</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🌐 Unit Converter</h1>
+      <button id="darkModeToggle">🌙</button>
+    </header>
+
+    <div class="converter">
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="temperature">Temperature</option>
+        <option value="time">Time</option>
+      </select>
+
+      <input type="number" id="inputValue" placeholder="Enter value" />
+
+      <div class="unit-row">
+        <select id="fromUnit"></select>
+        <span>→</span>
+        <select id="toUnit"></select>
+      </div>
+
+      <div class="result" id="result">Result will appear here</div>
+
+      <h3>🕒 Conversion History</h3>
+      <ul id="history"></ul>
+      <button id="exportBtn">⬇️ Export CSV</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker Registered', reg))
+          .catch(err => console.log('Service Worker Failed', err));
+      });
+    }
+  </script>
+</body>
+</html>
